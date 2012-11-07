@@ -361,7 +361,7 @@ int main(int argc, const char * argv[])
 {
     srand((unsigned int)time(NULL));
 
-    int results[2] = {0, 0};
+    int results[STATE_COUNT] = {0};
     for (int i=0; i<kNumGames; i++)
     {
         BattleMap map;
@@ -372,16 +372,15 @@ int main(int argc, const char * argv[])
             Command c0, c1;
             state = map.Update(c0, c1);
         } while (state == STATE_Continue);
+        
+        results[state]++;
     
         std::cout << "GAME END: " << kGameStateNames[state] << " (after " << (kGameLength - map.GetTimeRemaining()) << " ticks)" << std::endl;
-        
-        if (state == STATE_Tank1Dead)
-            results[0]++;
-        else if (state == STATE_Tank0Dead)
-            results[1]++;
     }
     
-    std::cout << "Results after " << kNumGames << " battles: Tank 0 with " << results[0] << " wins, Tank 1 with " << results[1] << " wins." << std::endl;
+    std::cout << "Results after " << kNumGames << " battles: Tank 0 with " << results[STATE_Tank1Dead] << " wins, Tank 1 with " << results[STATE_Tank0Dead] << " wins." << std::endl;
+    
+    std::cout << "There were " << (results[STATE_TieBothDead] + results[STATE_TieTimeOver]) << " draws, " << results[STATE_TieTimeOver] << " of which were time-overs, and " << results[STATE_TieBothDead] << " were doube-deaths." << std::endl;
     
     return 0;
 }
