@@ -1,0 +1,229 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7592C16D164F908600E79990 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7592C16C164F908600E79990 /* main.cpp */; };
+		7592C16F164F908600E79990 /* TankAIRandom.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7592C16E164F908600E79990 /* TankAIRandom.1 */; };
+		7592C1CF164FA01A00E79990 /* libTankAICommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7592C1CE164FA01A00E79990 /* libTankAICommon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7592C166164F908600E79990 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7592C16F164F908600E79990 /* TankAIRandom.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7592C168164F908600E79990 /* TankAIRandom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TankAIRandom; sourceTree = BUILT_PRODUCTS_DIR; };
+		7592C16C164F908600E79990 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7592C16E164F908600E79990 /* TankAIRandom.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TankAIRandom.1; sourceTree = "<group>"; };
+		7592C1CE164FA01A00E79990 /* libTankAICommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTankAICommon.a; path = "../../../../../Library/Developer/Xcode/DerivedData/TankAI-emzsbntobtkkmzgiehucrqifrwlu/Build/Products/Debug/libTankAICommon.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7592C165164F908600E79990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7592C1CF164FA01A00E79990 /* libTankAICommon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7592C15D164F908600E79990 = {
+			isa = PBXGroup;
+			children = (
+				7592C1CE164FA01A00E79990 /* libTankAICommon.a */,
+				7592C16B164F908600E79990 /* TankAIRandom */,
+				7592C169164F908600E79990 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7592C169164F908600E79990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7592C168164F908600E79990 /* TankAIRandom */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7592C16B164F908600E79990 /* TankAIRandom */ = {
+			isa = PBXGroup;
+			children = (
+				7592C16C164F908600E79990 /* main.cpp */,
+				7592C16E164F908600E79990 /* TankAIRandom.1 */,
+			);
+			path = TankAIRandom;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7592C167164F908600E79990 /* TankAIRandom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7592C172164F908600E79990 /* Build configuration list for PBXNativeTarget "TankAIRandom" */;
+			buildPhases = (
+				7592C164164F908600E79990 /* Sources */,
+				7592C165164F908600E79990 /* Frameworks */,
+				7592C166164F908600E79990 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TankAIRandom;
+			productName = TankAIRandom;
+			productReference = 7592C168164F908600E79990 /* TankAIRandom */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7592C15F164F908600E79990 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Mesophase;
+			};
+			buildConfigurationList = 7592C162164F908600E79990 /* Build configuration list for PBXProject "TankAIRandom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7592C15D164F908600E79990;
+			productRefGroup = 7592C169164F908600E79990 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7592C167164F908600E79990 /* TankAIRandom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7592C164164F908600E79990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7592C16D164F908600E79990 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7592C170164F908600E79990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7592C171164F908600E79990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7592C173164F908600E79990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = ../TankAICommon;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/TankAI-emzsbntobtkkmzgiehucrqifrwlu/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7592C174164F908600E79990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = ../TankAICommon;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/TankAI-emzsbntobtkkmzgiehucrqifrwlu/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7592C162164F908600E79990 /* Build configuration list for PBXProject "TankAIRandom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7592C170164F908600E79990 /* Debug */,
+				7592C171164F908600E79990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7592C172164F908600E79990 /* Build configuration list for PBXNativeTarget "TankAIRandom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7592C173164F908600E79990 /* Debug */,
+				7592C174164F908600E79990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7592C15F164F908600E79990 /* Project object */;
+}

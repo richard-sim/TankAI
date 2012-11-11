@@ -9,7 +9,35 @@
 /* Begin PBXBuildFile section */
 		754E71F51647942D00A7C626 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 754E71F41647942D00A7C626 /* main.cpp */; };
 		754E71F71647942D00A7C626 /* TankAI.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 754E71F61647942D00A7C626 /* TankAI.1 */; };
+		7592C1CB164F9DCC00E79990 /* libTankAICommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7592C1B4164F921700E79990 /* libTankAICommon.a */; };
+		7592C1E2164FA2B200E79990 /* BattleMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7592C1D0164FA13400E79990 /* BattleMap.cpp */; };
+		7592C1E4164FA2B200E79990 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7592C1D2164FA13400E79990 /* Projectile.cpp */; };
+		7592C1E6164FA2B200E79990 /* Tank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7592C1D4164FA13400E79990 /* Tank.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7592C179164F908700E79990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7592C175164F908600E79990 /* TankAIRandom.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7592C168164F908600E79990;
+			remoteInfo = TankAIRandom;
+		};
+		7592C1B3164F921700E79990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7592C1AF164F921700E79990 /* TankAICommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7592C1A8164F921700E79990;
+			remoteInfo = TankAICommon;
+		};
+		7592C1C9164F9C1100E79990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7592C1AF164F921700E79990 /* TankAICommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7592C1A7164F921700E79990;
+			remoteInfo = TankAICommon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		754E71EE1647942D00A7C626 /* CopyFiles */ = {
@@ -28,6 +56,14 @@
 		754E71F01647942D00A7C626 /* TankAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TankAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		754E71F41647942D00A7C626 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		754E71F61647942D00A7C626 /* TankAI.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TankAI.1; sourceTree = "<group>"; };
+		7592C175164F908600E79990 /* TankAIRandom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TankAIRandom.xcodeproj; path = TankAIRandom/TankAIRandom.xcodeproj; sourceTree = "<group>"; };
+		7592C1AF164F921700E79990 /* TankAICommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TankAICommon.xcodeproj; path = TankAICommon/TankAICommon.xcodeproj; sourceTree = "<group>"; };
+		7592C1D0164FA13400E79990 /* BattleMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BattleMap.cpp; sourceTree = "<group>"; };
+		7592C1D1164FA13400E79990 /* BattleMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattleMap.h; sourceTree = "<group>"; };
+		7592C1D2164FA13400E79990 /* Projectile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Projectile.cpp; sourceTree = "<group>"; };
+		7592C1D3164FA13400E79990 /* Projectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
+		7592C1D4164FA13400E79990 /* Tank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tank.cpp; sourceTree = "<group>"; };
+		7592C1D5164FA13400E79990 /* Tank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7592C1CB164F9DCC00E79990 /* libTankAICommon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +81,8 @@
 		754E71E51647942D00A7C626 = {
 			isa = PBXGroup;
 			children = (
+				7592C1AF164F921700E79990 /* TankAICommon.xcodeproj */,
+				7592C175164F908600E79990 /* TankAIRandom.xcodeproj */,
 				754E71F31647942D00A7C626 /* TankAI */,
 				754E71F11647942D00A7C626 /* Products */,
 			);
@@ -61,9 +100,31 @@
 			isa = PBXGroup;
 			children = (
 				754E71F41647942D00A7C626 /* main.cpp */,
+				7592C1D0164FA13400E79990 /* BattleMap.cpp */,
+				7592C1D1164FA13400E79990 /* BattleMap.h */,
+				7592C1D2164FA13400E79990 /* Projectile.cpp */,
+				7592C1D3164FA13400E79990 /* Projectile.h */,
+				7592C1D4164FA13400E79990 /* Tank.cpp */,
+				7592C1D5164FA13400E79990 /* Tank.h */,
 				754E71F61647942D00A7C626 /* TankAI.1 */,
 			);
 			path = TankAI;
+			sourceTree = "<group>";
+		};
+		7592C176164F908600E79990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7592C17A164F908700E79990 /* TankAIRandom */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7592C1B0164F921700E79990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7592C1B4164F921700E79990 /* libTankAICommon.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +141,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7592C1CA164F9C1100E79990 /* PBXTargetDependency */,
 			);
 			name = TankAI;
 			productName = TankAI;
@@ -105,6 +167,16 @@
 			mainGroup = 754E71E51647942D00A7C626;
 			productRefGroup = 754E71F11647942D00A7C626 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7592C1B0164F921700E79990 /* Products */;
+					ProjectRef = 7592C1AF164F921700E79990 /* TankAICommon.xcodeproj */;
+				},
+				{
+					ProductGroup = 7592C176164F908600E79990 /* Products */;
+					ProjectRef = 7592C175164F908600E79990 /* TankAIRandom.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				754E71EF1647942D00A7C626 /* TankAI */,
@@ -112,16 +184,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		7592C17A164F908700E79990 /* TankAIRandom */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = TankAIRandom;
+			remoteRef = 7592C179164F908700E79990 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7592C1B4164F921700E79990 /* libTankAICommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTankAICommon.a;
+			remoteRef = 7592C1B3164F921700E79990 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		754E71EC1647942D00A7C626 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7592C1E2164FA2B200E79990 /* BattleMap.cpp in Sources */,
+				7592C1E4164FA2B200E79990 /* Projectile.cpp in Sources */,
+				7592C1E6164FA2B200E79990 /* Tank.cpp in Sources */,
 				754E71F51647942D00A7C626 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7592C1CA164F9C1100E79990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TankAICommon;
+			targetProxy = 7592C1C9164F9C1100E79990 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		754E71F81647942D00A7C626 /* Debug */ = {
@@ -178,6 +278,7 @@
 		754E71FB1647942D00A7C626 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = TankAICommon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -185,6 +286,7 @@
 		754E71FC1647942D00A7C626 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = TankAICommon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -208,6 +310,7 @@
 				754E71FC1647942D00A7C626 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
