@@ -34,12 +34,29 @@ int main(int argc, const char * argv[])
     
     std::cout << "Tank running..." << std::endl;
     
+    bool registered = false;
+    do
     {
         char serializedData[1];
         serializedData[0] = (char)SERVERCOMMAND_RegisterTank;
         while (!socket.Send(kServerAddress, serializedData, 1))
             /* loop until the registration goes through */;
-    }
+
+        unsigned int startTime = net::GetTimeInMS();
+        
+        do
+        {
+            net::Address sender;
+            char buffer[256];
+            int bytesRead;
+            while ((bytesRead = socket.Receive(sender, buffer, sizeof(buffer))) > 0)
+            {
+                ServerResponse response = (ServerResponse)buffer[0];
+                if (response == RESPONSE_Ack)
+                    registered = true;
+            }
+        } while (!registered && ((net::GetTimeInMS()-startTime) < 10000));
+    } while (!registered);
     
     bool quit = false;
     do

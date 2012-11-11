@@ -11,6 +11,7 @@ namespace net
 {
 	// platform independent wait for n seconds
 	void wait( float seconds );
+    unsigned int GetTimeInMS();
 
 	// internet address
 	class Address

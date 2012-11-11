@@ -54,10 +54,25 @@ namespace net
 		Sleep( (int) ( seconds * 1000.0f ) );
 	}
     
+    #include <mmsystem.h>
+    #pragma comment( lib, "winmm.lib" )
+    unsigned int GetTimeInMS()
+    {
+        return timeGetTime();
+    }
+    
 #else
     
     #include <unistd.h>
 	void wait( float seconds ) { usleep( (int) ( seconds * 1000000.0f ) ); }
+    
+    #include <sys/time.h>
+    unsigned int GetTimeInMS()
+    {
+        struct timeval now;
+        gettimeofday(&now, NULL);
+        return now.tv_usec / 1000;
+    }
     
 #endif
     

@@ -67,11 +67,17 @@ int main(int argc, const char * argv[])
                     {
                         t0Address = sender;
                         t0Registered = true;
+                        
+                        char cmdAck[1] = { (char)RESPONSE_Ack };
+                        socket.Send(t0Address, cmdAck, 1);
                     }
                     else
                     {
                         t1Address = sender;
                         t1Registered = true;
+                        
+                        char cmdAck[1] = { (char)RESPONSE_Ack };
+                        socket.Send(t1Address, cmdAck, 1);
                     }
                     break;
                 }

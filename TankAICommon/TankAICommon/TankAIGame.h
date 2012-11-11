@@ -56,6 +56,8 @@ enum ServerResponse
 {
     RESPONSE_Go,
     RESPONSE_PingResults,
+    
+    RESPONSE_Ack,
     RESPONSE_Quit,
     
     RESPONSE_COUNT
