@@ -11,6 +11,10 @@
 #include "TankAICommon/Net.h"
 
 #include "TankAICommon/TankAIGame.h"
+#include "TankAICommon/Command.h"
+
+
+const net::Address kServerAddress(127,0,0,1, kServerPort);
 
 
 int main(int argc, const char * argv[])
@@ -30,33 +34,62 @@ int main(int argc, const char * argv[])
     
     std::cout << "Tank running..." << std::endl;
     
+    {
+        char serializedData[1];
+        serializedData[0] = (char)SERVERCOMMAND_RegisterTank;
+        while (!socket.Send(kServerAddress, serializedData, 1))
+            /* loop until the registration goes through */;
+    }
+    
     bool quit = false;
-    while (!quit)
+    do
     {
-    net::Address sender;
-    char buffer[256];
-    int bytesRead;
-    while ((bytesRead = socket.Receive(sender, buffer, sizeof(buffer))) > 0)
-    {
-        std::cout << "Tank received packet from " << (int)sender.GetA() << "." << (int)sender.GetB() << "." << (int)sender.GetC() << "." << (int)sender.GetD() << ":" << sender.GetPort() << " (" << bytesRead << " bytes)" << std::endl;
-        std::cout << "\tFrom Server: " << buffer << std::endl;
-        
-        quit = (strcmp(buffer, "quit") == 0);
-        
-        char* buff = buffer;
-        while (*buff)
+        net::Address sender;
+        char buffer[256];
+        int bytesRead;
+        while ((bytesRead = socket.Receive(sender, buffer, sizeof(buffer))) > 0)
         {
-            if (*buff >= 'a' && *buff <= 'z')
-                *buff -= 32;
-            else if (*buff >= 'A' && *buff <= 'Z')
-                *buff += 32;
-            buff++;
+            ServerResponse response = (ServerResponse)buffer[0];
+            switch (response)
+            {
+                case RESPONSE_PingResults:
+                {
+                    std::cout << "\tPing results received from server (" << (bytesRead-1) << " bytes)." << std::endl;
+                    break;
+                }
+                    
+                case RESPONSE_Go:
+                {
+                    Command cmd;
+                    cmd.SetRandom();
+                    
+                    char serializedData[32];
+                    serializedData[0] = (char)SERVERCOMMAND_Command;
+                    int cmdSize = 0;
+                    cmd.Encode(&(serializedData[1]), &cmdSize);
+                    while (!socket.Send(kServerAddress, serializedData, cmdSize+1))
+                        /* loop until the command goes through */;
+                    break;
+                }
+                    
+                case RESPONSE_Quit:
+                {
+                    std::cout << "\tQuit received from server. Terminating." << std::endl;
+                    quit = true;
+                    break;
+                }
+                    
+                default:
+                {
+                    std::cout << "\tUnknown response from server: " << (int)response << ". Terminating." << std::endl;
+                    quit = true;
+                    break;
+                }
+            }
         }
-
-        socket.Send(net::Address(127,0,0,1, kServerPort), buffer, bytesRead);
-    }
-        //net::wait(1.0f);
-    }
+        
+        net::wait(0.1f);
+    } while (!quit);
     
     std::cout << "Tank finished." << std::endl;
     

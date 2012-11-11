@@ -44,5 +44,22 @@ enum GameAction
     ACTION_COUNT
 };
 
+enum ServerCommand
+{
+    SERVERCOMMAND_RegisterTank,
+    SERVERCOMMAND_Command,
+    
+    SERVERCOMMAND_COUNT
+};
+
+enum ServerResponse
+{
+    RESPONSE_Go,
+    RESPONSE_PingResults,
+    RESPONSE_Quit,
+    
+    RESPONSE_COUNT
+};
+
 
 #endif
